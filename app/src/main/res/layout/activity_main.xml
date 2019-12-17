@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/gameLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Level"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textColor="#f7347a"
+        android:textStyle="bold"
+        android:layout_marginBottom="35dp"
+        />
+
+    <EditText
+        android:id="@+id/editWord"
+        android:layout_below="@+id/gameLevel"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:textColor="#FFFFFF"
+        android:focusable="false"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="45dp"
+        android:background="@drawable/text_background" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/editWord"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_below="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/btn"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnOk"
+            android:background="#f7347a"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:text="Ok"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnClear"
+            android:background="#f7347a"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:layout_marginLeft="10dp"
+            android:text="Clear"/>
+    </LinearLayout>
+
+</RelativeLayout>
